@@ -1,0 +1,91 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+const TeacherSite = () => {
+  const handlePayment = () => {
+    // Example integration with Stripe or other payment processor
+    alert("Redirecting to payment gateway...");
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-4">
+      {/* Header */}
+      <header className="text-center py-6 bg-blue-500 text-white rounded-2xl shadow-md">
+        <h1 className="text-3xl font-bold">Mathematics Teacher</h1>
+        <p className="text-lg mt-2">Helping students excel in math and pass their exams with confidence!</p>
+      </header>
+
+      {/* Main Content */}
+      <main className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        {/* About Section */}
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent>
+            <h2 className="text-2xl font-bold mb-4">About Me</h2>
+            <p className="text-gray-700">
+              I am an experienced math teacher with over 10 years of helping students prepare for exams and develop problem-solving skills.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Services Section */}
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent>
+            <h2 className="text-2xl font-bold mb-4">Services</h2>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>One-on-one tutoring</li>
+              <li>Exam preparation (e.g., SAT, OGE)</li>
+              <li>Consultations and mentoring</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        {/* Payment Section */}
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent>
+            <h2 className="text-2xl font-bold mb-4">Make a Payment</h2>
+            <p className="text-gray-700 mb-4">
+              You can easily pay for your lessons online. Click the button below to proceed.
+            </p>
+            <Button onClick={handlePayment} className="bg-green-500 text-white">
+              Pay Now
+            </Button>
+          </CardContent>
+        </Card>
+
+        {/* Contact Section */}
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent>
+            <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full p-2 border rounded-md"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full p-2 border rounded-md"
+              />
+              <textarea
+                placeholder="Your Message"
+                className="w-full p-2 border rounded-md"
+              ></textarea>
+              <Button type="submit" className="bg-blue-500 text-white">
+                Send Message
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </main>
+
+      {/* Footer */}
+      <footer className="text-center mt-8 text-gray-600">
+        &copy; 2025 Mathematics Teacher. All rights reserved.
+      </footer>
+    </div>
+  );
+};
+
+export default TeacherSite;
